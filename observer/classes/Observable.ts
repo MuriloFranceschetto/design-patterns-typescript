@@ -10,7 +10,7 @@ export class Observable implements IObservable {
     }
 
     remove(observer: IObserver): void {
-        this._observers = this._observers.filter(obs => obs === observer);
+        this._observers = this._observers.filter(obs => obs !== observer);
     }
 
     notify(): void {
